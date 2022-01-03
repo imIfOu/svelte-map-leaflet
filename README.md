@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/svelte-map-leaflet.svg)](https://badge.fury.io/js/svelte-map-leaflet)
+
 # Svelte Map leaflet
 
 This project implements the Leaflet library to manipulate map in the form of reactive svelte components.
@@ -20,15 +22,28 @@ Install module : `npm i svelte-map-leaflet`
 ### Example of usage
 ```sveltehtml
 <script>
-    import {Map, TitleLayer, Marker, Popup} from 'svelte-map-leaflet';
+    import 'leaflet/dist/leaflet.css'; //Don't forget to declare leaflet css
+    import {Map, TitleLayer, Marker, Popup} from 'svelte-map-leaflet'
+
+    const mapOptions = { center: [40.6852119,-74.0788838], zoom: 10};
+    const tileUrl = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
+    const markerLatLng = [40.6852119,-74.0788838];
+    const popupMessage = "Statue of Liberty National Monument";
 </script>
 
-<Map>
-    <TitleLayer></TitleLayer>
-    <Marker>
-        <Popup>
-            <h4>This is a popup</h4>
-        </Popup>
-    </Marker>
-</Map>
+<div class="map">
+    <Map options={mapOptions}>
+        <TitleLayer url={tileUrl}></TitleLayer>
+        <Marker latLng={markerLatLng}>
+            <Popup>{popupMessage}</Popup>
+        </Marker>
+    </Map>
+</div>
+
+<style>
+    .map{
+        height: 400px;
+        width: 400px;
+    }
+</style>
 ```
