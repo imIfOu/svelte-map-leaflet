@@ -11,10 +11,14 @@ Link of Leaflet library :  https://leafletjs.com/index.html
 
 ## Documentation
 
-## Example
+For more info see the Documentation.
 
+## Getting Started
+
+Install module : `npm i svelte-map-leaflet`
+
+### Example of usage
 ```sveltehtml
-
 <script>
     import {Map, TitleLayer, Marker, Popup} from 'svelte-map-leaflet';
 </script>
