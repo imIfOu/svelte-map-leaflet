@@ -1,0 +1,35 @@
+{
+  "name": "svelte-map-leaftlet",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "svelte": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w"
+  },
+  "devDependencies": {
+    "rollup": "^2.62.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-svelte": "^7.1.0",
+    "svelte": "^3.44.3"
+  },
+  "dependencies": {
+    "leaflet": "^1.7.1"
+  },
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/imIfOu/svelte-map-leaflet"
+  },
+  "bugs": {
+    "url": "https://github.com/imIfOu/svelte-map-leaflet/issues"
+  },
+  "keywords": [
+    "svelte",
+    "map",
+    "leaflet"
+  ]
+}
