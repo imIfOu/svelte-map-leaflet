@@ -13,17 +13,19 @@ Link of Leaflet library :  https://leafletjs.com/index.html
 
 ## Documentation
 
-For more info see the Documentation.
+For more info see the Documentation : https://github.com/imIfOu/svelte-map-leaflet/wiki
 
 ## Getting Started
 
 Install module : `npm i svelte-map-leaflet`
 
+Import leaflet global css :  `import 'leaflet/dist/leaflet.css';`
+
 ### Example of usage
-```sveltehtml
+```svelte
 <script>
     import 'leaflet/dist/leaflet.css'; //Don't forget to declare leaflet css
-    import {Map, TitleLayer, Marker, Popup} from 'svelte-map-leaflet'
+    import {Map, TileLayer, Marker, Popup} from 'svelte-map-leaflet'
 
     const mapOptions = { center: [40.6852119,-74.0788838], zoom: 10};
     const tileUrl = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
@@ -33,7 +35,7 @@ Install module : `npm i svelte-map-leaflet`
 
 <div class="map">
     <Map options={mapOptions}>
-        <TitleLayer url={tileUrl}></TitleLayer>
+        <TileLayer url={tileUrl}></TileLayer>
         <Marker latLng={markerLatLng}>
             <Popup>{popupMessage}</Popup>
         </Marker>

@@ -1,5 +1,5 @@
 import Map from './components/Map.svelte';
-import TitleLayer from "./components/TitleLayer.svelte";
+import TileLayer from "./components/TileLayer.svelte";
 import Zoom from "./components/control/Zoom.svelte";
 import Scale from "./components/control/Scale.svelte";
 import Layers from "./components/control/Layers.svelte";
@@ -23,7 +23,7 @@ import Polyline from "./components/vector/Polyline.svelte";
 import Rectangle from "./components/vector/Rectangle.svelte";
 
 export {
-    TitleLayer,
+    TileLayer,
     Zoom,
     Scale,
     Layers,
