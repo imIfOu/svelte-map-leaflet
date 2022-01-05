@@ -6,13 +6,7 @@
     export let name;
     export let events = [];
     export let latLngs = [];
-    export let color = '#3388ff';
-    export let weight = 3;
-    export let opacity = 1.0;
-    export let lineCap = 'round';
-    export let lineJoin = 'round';
-    export let dashArray = null;
-    export let dashOffset = null;
+    export let style = {};
     export let options = {};
     export const getInstance = () => leafletPolyline;
 
@@ -29,15 +23,7 @@
     });
 
     $: leafletPolyline && leafletPolyline.setLatLngs(latLngs);
-    $: leafletPolyline && leafletPolyline.setStyle({
-        color: color,
-        weight: weight,
-        opacity: opacity,
-        lineCap: lineCap,
-        lineJoin: lineJoin,
-        dashArray: dashArray,
-        dashOffset: dashOffset,
-    });
+    $: leafletPolyline && leafletPolyline.setStyle(style);
 </script>
 
 {#if leafletPolyline}
